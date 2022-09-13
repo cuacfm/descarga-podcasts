@@ -119,6 +119,13 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Higher-Street/
 DURACION_MINIMA="0"
 /home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
+
+#DESCARGA DE OPINIONES EN TXURI URDIN
+PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/opiniones-en-txuri-urdin/rss/"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Opiniones-En-Txuri-Urdin/opiniones-txuri-urdin.mp3"
+DURACION_MINIMA="0"
+/home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
 # REDIFUSIONES PROGRAMAS INTERNOS
 
 #DESCARGA DE ORION
@@ -405,9 +412,15 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Conoces-Hannover/conoces-h
 DURACION_MINIMA="0"
 /home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
-#DESCARGA DE OPINIONES EN TXURI URDIN
-PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/opiniones-en-txuri-urdin/rss/"
-FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Opiniones-En-Txuri-Urdin/opinionestxuriurdin.mp3"
+#DESCARGA OZA-GAITEIRA: BARRIOS 2030
+PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/oza-gaiteira-barrios-2030/rss/"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Oza-Gaiteira-Barrios-2030/oza-gaiteira-barrios-2030.mp3"
+DURACION_MINIMA="0"
+/home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+#DESCARGA CRUNIA FALA
+PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/crunia-fala/rss/"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Crunia-Fala/crunia-fala.mp3"
 DURACION_MINIMA="0"
 /home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
