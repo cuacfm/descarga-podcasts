@@ -424,6 +424,13 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Crunia-Fala/crunia-fala.mp
 DURACION_MINIMA="0"
 /home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
+#DESCARGA MUSIC BOX
+PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/music-box/rss/"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Music-Box/music-box.mp3"
+DURACION_MINIMA="0"
+/home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+
 #PETICIONES PODCAST ONDA COLOR
 # DESCARGA SANGRE FUCSIA PARA ONDACOLOR
 PODCAST_RSS_URL="http://www.ivoox.com/podcast-sangre-fucsia_fg_f162460_filtro_1.xml"
