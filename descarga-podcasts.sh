@@ -182,12 +182,6 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Simplemente-Gente/simpleme
 DURACION_MINIMA="0"
 /home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
-#DESCARGA SIN ETIQUETAS
-PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/sin-etiquetas/rss/"
-FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Sin-Etiquetas/sin-etiquetas.mp3"
-DURACION_MINIMA="0"
-/home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
-
 #DESCARGA A FUME DE CAROZO
 PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/a-fume-de-carozo/rss/"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/A-Fume-De-Carozo/a-fume-de-carozo.mp3"
@@ -251,7 +245,6 @@ if [[ "$ULTIMA_FECHA_FICHERO_COMUN" < "$ULTIMA_FECHA_DESCARGA_PODCAST" ]]
       cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
 fi
 
-
 #DESCARGA HEIMA
 PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/heima/rss/"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Heima/heima.mp3"
@@ -282,21 +275,15 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Especial-Festival-Noroeste
 DURACION_MINIMA="0"
 /home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
-#DESCARGA ENBOXES
-PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/enboxes/rss/"
-FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Enboxes/enboxes.mp3"
+#DESCARGA ESCAPEMOTOR
+PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/escapemotor/rss/"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Escapemotor/escapemotor.mp3"
 DURACION_MINIMA="0"
 /home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 #DESCARGA POCA BROMA
 PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/poca-broma/rss/"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Poca-Broma/poca-broma.mp3"
-DURACION_MINIMA="0"
-/home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
-
-#DESCARGA INTERNET DE TU COLOR FAVORITO
-PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/internet-de-tu-color-favorito/rss/"
-FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Internet-De-Tu-Color-Favorito/internet-de-tu-color-favorito.mp3"
 DURACION_MINIMA="0"
 /home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
@@ -380,7 +367,6 @@ if [[ "$ULTIMA_FECHA_FICHERO_COMUN" < "$ULTIMA_FECHA_DESCARGA_PODCAST" ]]
       echo "Subtituyendo $FICHERO_COMUN con $FICHERO_DESTINO"
       cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
 fi
-
 
 #DESCARGA Radio 50 Y Pico
 PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/radio-50-y-pico/rss/"
