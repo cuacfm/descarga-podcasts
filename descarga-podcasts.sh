@@ -574,6 +574,12 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/ONDA-COLOR/Palma-Y-Romeros/palma-
 DURACION_MINIMA="0"
 /home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
+#DESCARGA DE THE GREEN BEE
+PODCAST_RSS_URL="https://anchor.fm/s/d95804ec/podcast/rss"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/ONDA-COLOR/Green-Bee/green-bee.mp3"
+DURACION_MINIMA="0"
+/home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
 
 #DESCARGA DE PROGRAMAS EXTERNOS PARA CUAC - TEMPORADA 2021/2022
 
