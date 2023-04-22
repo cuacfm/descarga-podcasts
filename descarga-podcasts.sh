@@ -422,6 +422,13 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/De-Los-Adoquines-A-Los-Alp
 DURACION_MINIMA="0"
 /home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
+#DESCARGA ONDA CIENCIA
+PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/onda-ciencia/rss/"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Onda-Ciencia/onda-ciencia.mp3"
+DURACION_MINIMA="0"
+/home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+
 
 #PETICIONES PODCAST ONDA COLOR
 # DESCARGA SANGRE FUCSIA PARA ONDACOLOR
