@@ -461,11 +461,6 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Carne-Cruda/carnecruda.mp3"
 DURACION_MINIMA="5000"
 /home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
-#DESCARGA COFFEE BREAK ONDA COLOR
-PODCAST_RSS_URL="https://www.ivoox.com/podcast-coffee-break_fg_f1294903_filtro_1.xml"
-FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/ONDA-COLOR/Coffee-Break/coffee-break.mp3"
-DURACION_MINIMA="0"
-/home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 #DESCARGA RED REFUGIO ONDA COLOR
 PODCAST_RSS_URL="https://www.ivoox.com/podcast-red-refugio_fg_f1585844_filtro_1.xml"
@@ -610,9 +605,26 @@ DURACION_MINIMA="0"
 
 #DESCARGA DE COFFEE BREAK
 PODCAST_RSS_URL="https://feeds.acast.com/public/shows/63910e8796d1480011f2eaaa"
-FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Coffee-Break/coffeebreak.mp3"
+FICHERO_DESTINO_A="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Coffee-Break/coffeebreak-a.mp3"
 DURACION_MINIMA="0"
-/home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+FILTRO="_A:"
+/home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO_A" "$DURACION_MINIMA" "$FILTRO"
+FICHERO_DESTINO_B="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Coffee-Break/coffeebreak-b.mp3"
+DURACION_MINIMA="0"
+FILTRO="_B:"
+/home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO_B" "$DURACION_MINIMA" "$FILTRO"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Coffee-Break/coffeebreak.mp3"
+if [ "$FICHERO_DESTINO_A" -nt "$FICHERO_DESTINO" ];
+then
+    ffmpeg -loglevel panic -i "concat:$FICHERO_DESTINO_A|$FICHERO_DESTINO_B" -acodec copy $FICHERO_DESTINO
+fi
+
+#DESCARGA COFFEE BREAK ONDA COLOR
+FICHERO_DESTINO_ONDA_COLOR="/home/cuacfm/ownCloud/Podcast/ONDA-COLOR/Coffee-Break/coffee-break.mp3"
+if [ "$FICHERO_DESTINO" -nt "$FICHERO_DESTINO_ONDA_COLOR" ];
+then
+   cp $FICHERO_DESTINO $FICHERO_DESTINO_ONDA_COLOR
+fi
 
 #DESCARGA DE TE CON GOTAS
 PODCAST_RSS_URL="https://tecongotas.com/feed/podcast"
