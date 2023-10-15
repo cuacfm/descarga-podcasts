@@ -429,6 +429,12 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Onda-Ciencia/onda-ciencia.
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
+#DESCARGA Y SI NOS ECHAMOS UNOS GUAROS
+PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/y-si-nos-echamos-unos-guaros/rss/"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Y-si-nos-echamos-unos-guaros/unos-guaros.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
 #DESCARGA DRAGONFLY
 PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/dragonfly/rss/"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Dragonfly/dragonfly.mp3"
