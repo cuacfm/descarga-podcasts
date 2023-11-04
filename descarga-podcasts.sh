@@ -441,6 +441,12 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Dragonfly/dragonfly.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
+#DESCARGA DE LA NOVENA PUERTA
+PODCAST_RSS_URL="pcast://cuacfm.org/radioco/programmes/la-novena-puerta/rss/"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/la-novena-puerta/la-novena-puerta.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
 #PETICIONES PODCAST ONDA COLOR
 # DESCARGA SANGRE FUCSIA PARA ONDACOLOR
 PODCAST_RSS_URL="http://www.ivoox.com/podcast-sangre-fucsia_fg_f162460_filtro_1.xml"
