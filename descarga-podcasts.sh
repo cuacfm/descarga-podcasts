@@ -225,27 +225,6 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Enworking/enworking.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
-#Bloque para emisión común de La Novena Puerta y Evolucion
-ULTIMA_FECHA_DESCARGA_PODCAST=`date +%Y-%m-%d-%H:%M -r "$FICHERO_DESTINO"`
-FICHERO_COMUN="/home/cuacfm/ownCloud/Podcast/CUACFM/La-Novena-Puerta-Evolucion/la-novena-puerta-evolucion.mp3"
-if [ ! -f $FICHERO_COMUN ]
-then
-    echo "Creando $FICHERO_COMUN con $FICHERO_DESTINO"
-    DIRECTORIO_COMUN=$(dirname "${FICHERO_COMUN}")
-    if [ ! -d $DIRECTORIO_COMUN ]
-    then
-	mkdir -p $DIRECTORIO_COMUN
-    fi
-    cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
-fi
-
-ULTIMA_FECHA_FICHERO_COMUN=`date +%Y-%m-%d-%H:%M -r "$FICHERO_COMUN"`
-if [[ "$ULTIMA_FECHA_FICHERO_COMUN" < "$ULTIMA_FECHA_DESCARGA_PODCAST" ]]
-  then
-      echo "Subtituyendo $FICHERO_COMUN con $FICHERO_DESTINO"
-      cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
-fi
-
 #Bloque para copiar el ultimo enworking al comun de enworking-tasebemnaradio
 ULTIMA_FECHA_DESCARGA_PODCAST=`date +%Y-%m-%d-%H:%M -r "$FICHERO_DESTINO"`
 FICHERO_COMUN="/home/cuacfm/ownCloud/Podcast/CUACFM/Enworking-Tase-Bem/enworking-tase-bem.mp3"
@@ -369,6 +348,27 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Tase-Bem-Na-Radio/ta-se-be
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
+#Bloque para copiar el ultimo enworking al comun de enworking-tasebemnaradio
+ULTIMA_FECHA_DESCARGA_PODCAST=`date +%Y-%m-%d-%H:%M -r "$FICHERO_DESTINO"`
+FICHERO_COMUN="/home/cuacfm/ownCloud/Podcast/CUACFM/Enworking-Tase-Bem/enworking-tase-bem.mp3"
+if [ ! -f $FICHERO_COMUN ]
+then
+    echo "Creando $FICHERO_COMUN con $FICHERO_DESTINO"
+    DIRECTORIO_COMUN=$(dirname "${FICHERO_COMUN}")
+    if [ ! -d $DIRECTORIO_COMUN ]
+    then
+	mkdir -p $DIRECTORIO_COMUN
+    fi
+    cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
+fi
+
+ULTIMA_FECHA_FICHERO_COMUN=`date +%Y-%m-%d-%H:%M -r "$FICHERO_COMUN"`
+if [[ "$ULTIMA_FECHA_FICHERO_COMUN" < "$ULTIMA_FECHA_DESCARGA_PODCAST" ]]
+  then
+      echo "Subtituyendo $FICHERO_COMUN con $FICHERO_DESTINO"
+      cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
+fi
+
 #DESCARGA Radio 50 Y Pico
 PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/radio-50-y-pico/rss/"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Radio-50-Y-Pico/radio-50-y-pico.mp3"
@@ -443,13 +443,7 @@ $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MIN
 
 #DESCARGA DE LA NOVENA PUERTA
 PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/la-novena-puerta/rss/"
-FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/La-Novena-Puerta/la-novena-puerta.mp3"
-DURACION_MINIMA="0"
-$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
-
-#DESCARGA EVOLUCIÓN
-PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/evolucion/rss/"
-FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Evolucion/evolucion.mp3"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/la-novena-puerta/la-novena-puerta.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
