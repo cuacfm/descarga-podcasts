@@ -246,6 +246,33 @@ if [[ "$ULTIMA_FECHA_FICHERO_COMUN" < "$ULTIMA_FECHA_DESCARGA_PODCAST" ]]
       cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
 fi
 
+#DESCARGA Tase Bem Na Radio
+PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/ta-se-bem-na-radio/rss/"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Tase-Bem-Na-Radio/ta-se-bem-na-radio.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+#Bloque para copiar el ultimo Tase Ben Na Radio al comun de enworking-tasebemnaradio
+ULTIMA_FECHA_DESCARGA_PODCAST=`date +%Y-%m-%d-%H:%M -r "$FICHERO_DESTINO"`
+FICHERO_COMUN="/home/cuacfm/ownCloud/Podcast/CUACFM/Enworking-Tase-Bem/enworking-tase-bem.mp3"
+if [ ! -f $FICHERO_COMUN ]
+then
+    echo "Creando $FICHERO_COMUN con $FICHERO_DESTINO"
+    DIRECTORIO_COMUN=$(dirname "${FICHERO_COMUN}")
+    if [ ! -d $DIRECTORIO_COMUN ]
+    then
+	mkdir -p $DIRECTORIO_COMUN
+    fi
+    cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
+fi
+
+ULTIMA_FECHA_FICHERO_COMUN=`date +%Y-%m-%d-%H:%M -r "$FICHERO_COMUN"`
+if [[ "$ULTIMA_FECHA_FICHERO_COMUN" < "$ULTIMA_FECHA_DESCARGA_PODCAST" ]]
+  then
+      echo "Subtituyendo $FICHERO_COMUN con $FICHERO_DESTINO"
+      cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
+fi
+
 #DESCARGA HEIMA
 PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/heima/rss/"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Heima/heima.mp3"
@@ -342,33 +369,6 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Minority-Sports/minority-s
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
-#DESCARGA Tase Bem Na Radio
-PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/ta-se-bem-na-radio/rss/"
-FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Tase-Bem-Na-Radio/ta-se-bem-na-radio.mp3"
-DURACION_MINIMA="0"
-$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
-
-#Bloque para copiar el ultimo enworking al comun de enworking-tasebemnaradio
-ULTIMA_FECHA_DESCARGA_PODCAST=`date +%Y-%m-%d-%H:%M -r "$FICHERO_DESTINO"`
-FICHERO_COMUN="/home/cuacfm/ownCloud/Podcast/CUACFM/Enworking-Tase-Bem/enworking-tase-bem.mp3"
-if [ ! -f $FICHERO_COMUN ]
-then
-    echo "Creando $FICHERO_COMUN con $FICHERO_DESTINO"
-    DIRECTORIO_COMUN=$(dirname "${FICHERO_COMUN}")
-    if [ ! -d $DIRECTORIO_COMUN ]
-    then
-	mkdir -p $DIRECTORIO_COMUN
-    fi
-    cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
-fi
-
-ULTIMA_FECHA_FICHERO_COMUN=`date +%Y-%m-%d-%H:%M -r "$FICHERO_COMUN"`
-if [[ "$ULTIMA_FECHA_FICHERO_COMUN" < "$ULTIMA_FECHA_DESCARGA_PODCAST" ]]
-  then
-      echo "Subtituyendo $FICHERO_COMUN con $FICHERO_DESTINO"
-      cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
-fi
-
 #DESCARGA Radio 50 Y Pico
 PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/radio-50-y-pico/rss/"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Radio-50-Y-Pico/radio-50-y-pico.mp3"
@@ -446,6 +446,54 @@ PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/la-novena-puerta/rss/"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/La-Novena-Puerta/la-novena-puerta.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+#Bloque para copiar el Novena Puerta al comun de novena-puerta-ecuacion
+ULTIMA_FECHA_DESCARGA_PODCAST=`date +%Y-%m-%d-%H:%M -r "$FICHERO_DESTINO"`
+FICHERO_COMUN="/home/cuacfm/ownCloud/Podcast/CUACFM/La-Novena-Puerta-Ecuacion/la-novena-puerta-ecuacion.mp3"
+if [ ! -f $FICHERO_COMUN ]
+then
+    echo "Creando $FICHERO_COMUN con $FICHERO_DESTINO"
+    DIRECTORIO_COMUN=$(dirname "${FICHERO_COMUN}")
+    if [ ! -d $DIRECTORIO_COMUN ]
+    then
+	mkdir -p $DIRECTORIO_COMUN
+    fi
+    cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
+fi
+
+ULTIMA_FECHA_FICHERO_COMUN=`date +%Y-%m-%d-%H:%M -r "$FICHERO_COMUN"`
+if [[ "$ULTIMA_FECHA_FICHERO_COMUN" < "$ULTIMA_FECHA_DESCARGA_PODCAST" ]]
+  then
+      echo "Subtituyendo $FICHERO_COMUN con $FICHERO_DESTINO"
+      cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
+fi
+
+#DESCARGA DE ECUACION
+PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/ecuacion/rss/"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Ecuacion/ecuacion.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+#Bloque para copiar el Ecuacion al comun de novena-puerta-ecuacion
+ULTIMA_FECHA_DESCARGA_PODCAST=`date +%Y-%m-%d-%H:%M -r "$FICHERO_DESTINO"`
+FICHERO_COMUN="/home/cuacfm/ownCloud/Podcast/CUACFM/La-Novena-Puerta-Ecuacion/la-novena-puerta-ecuacion.mp3"
+if [ ! -f $FICHERO_COMUN ]
+then
+    echo "Creando $FICHERO_COMUN con $FICHERO_DESTINO"
+    DIRECTORIO_COMUN=$(dirname "${FICHERO_COMUN}")
+    if [ ! -d $DIRECTORIO_COMUN ]
+    then
+	mkdir -p $DIRECTORIO_COMUN
+    fi
+    cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
+fi
+
+ULTIMA_FECHA_FICHERO_COMUN=`date +%Y-%m-%d-%H:%M -r "$FICHERO_COMUN"`
+if [[ "$ULTIMA_FECHA_FICHERO_COMUN" < "$ULTIMA_FECHA_DESCARGA_PODCAST" ]]
+  then
+      echo "Subtituyendo $FICHERO_COMUN con $FICHERO_DESTINO"
+      cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
+fi
 
 #PETICIONES PODCAST ONDA COLOR
 # DESCARGA SANGRE FUCSIA PARA ONDACOLOR
