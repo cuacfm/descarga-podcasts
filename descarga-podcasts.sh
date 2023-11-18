@@ -443,7 +443,7 @@ $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MIN
 
 #DESCARGA DE LA NOVENA PUERTA
 PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/la-novena-puerta/rss/"
-FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/la-novena-puerta/la-novena-puerta.mp3"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/La-Novena-Puerta/la-novena-puerta.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
