@@ -448,24 +448,27 @@ DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 #Bloque para copiar el Novena Puerta al comun de novena-puerta-ecuacion
-ULTIMA_FECHA_DESCARGA_PODCAST=`date +%Y-%m-%d-%H:%M -r "$FICHERO_DESTINO"`
-FICHERO_COMUN="/home/cuacfm/ownCloud/Podcast/CUACFM/La-Novena-Puerta-Ecuacion/la-novena-puerta-ecuacion.mp3"
-if [ ! -f $FICHERO_COMUN ]
+if [ -f $FICHERO_DESTINO ]
 then
-    echo "Creando $FICHERO_COMUN con $FICHERO_DESTINO"
-    DIRECTORIO_COMUN=$(dirname "${FICHERO_COMUN}")
-    if [ ! -d $DIRECTORIO_COMUN ]
+    ULTIMA_FECHA_DESCARGA_PODCAST=`date +%Y-%m-%d-%H:%M -r "$FICHERO_DESTINO"`
+    FICHERO_COMUN="/home/cuacfm/ownCloud/Podcast/CUACFM/La-Novena-Puerta-Ecuacion/la-novena-puerta-ecuacion.mp3"
+    if [ ! -f $FICHERO_COMUN ]
     then
-	mkdir -p $DIRECTORIO_COMUN
+	echo "Creando $FICHERO_COMUN con $FICHERO_DESTINO"
+	DIRECTORIO_COMUN=$(dirname "${FICHERO_COMUN}")
+	if [ ! -d $DIRECTORIO_COMUN ]
+	then
+	    mkdir -p $DIRECTORIO_COMUN
+	fi
+	cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
     fi
-    cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
-fi
 
-ULTIMA_FECHA_FICHERO_COMUN=`date +%Y-%m-%d-%H:%M -r "$FICHERO_COMUN"`
-if [[ "$ULTIMA_FECHA_FICHERO_COMUN" < "$ULTIMA_FECHA_DESCARGA_PODCAST" ]]
-  then
-      echo "Subtituyendo $FICHERO_COMUN con $FICHERO_DESTINO"
-      cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
+    ULTIMA_FECHA_FICHERO_COMUN=`date +%Y-%m-%d-%H:%M -r "$FICHERO_COMUN"`
+    if [[ "$ULTIMA_FECHA_FICHERO_COMUN" < "$ULTIMA_FECHA_DESCARGA_PODCAST" ]]
+    then
+	echo "Subtituyendo $FICHERO_COMUN con $FICHERO_DESTINO"
+	cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
+    fi
 fi
 
 #DESCARGA DE ECUACION
@@ -475,24 +478,27 @@ DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 #Bloque para copiar el Ecuacion al comun de novena-puerta-ecuacion
-ULTIMA_FECHA_DESCARGA_PODCAST=`date +%Y-%m-%d-%H:%M -r "$FICHERO_DESTINO"`
-FICHERO_COMUN="/home/cuacfm/ownCloud/Podcast/CUACFM/La-Novena-Puerta-Ecuacion/la-novena-puerta-ecuacion.mp3"
-if [ ! -f $FICHERO_COMUN ]
+if [ -f $FICHERO_DESTINO ]
 then
-    echo "Creando $FICHERO_COMUN con $FICHERO_DESTINO"
-    DIRECTORIO_COMUN=$(dirname "${FICHERO_COMUN}")
-    if [ ! -d $DIRECTORIO_COMUN ]
+    ULTIMA_FECHA_DESCARGA_PODCAST=`date +%Y-%m-%d-%H:%M -r "$FICHERO_DESTINO"`
+    FICHERO_COMUN="/home/cuacfm/ownCloud/Podcast/CUACFM/La-Novena-Puerta-Ecuacion/la-novena-puerta-ecuacion.mp3"
+    if [ ! -f $FICHERO_COMUN ]
     then
-	mkdir -p $DIRECTORIO_COMUN
+	echo "Creando $FICHERO_COMUN con $FICHERO_DESTINO"
+	DIRECTORIO_COMUN=$(dirname "${FICHERO_COMUN}")
+	if [ ! -d $DIRECTORIO_COMUN ]
+	then
+	    mkdir -p $DIRECTORIO_COMUN
+	fi
+	cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
     fi
-    cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
-fi
 
-ULTIMA_FECHA_FICHERO_COMUN=`date +%Y-%m-%d-%H:%M -r "$FICHERO_COMUN"`
-if [[ "$ULTIMA_FECHA_FICHERO_COMUN" < "$ULTIMA_FECHA_DESCARGA_PODCAST" ]]
-  then
-      echo "Subtituyendo $FICHERO_COMUN con $FICHERO_DESTINO"
-      cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
+    ULTIMA_FECHA_FICHERO_COMUN=`date +%Y-%m-%d-%H:%M -r "$FICHERO_COMUN"`
+    if [[ "$ULTIMA_FECHA_FICHERO_COMUN" < "$ULTIMA_FECHA_DESCARGA_PODCAST" ]]
+    then
+	echo "Subtituyendo $FICHERO_COMUN con $FICHERO_DESTINO"
+	cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
+    fi
 fi
 
 #PETICIONES PODCAST ONDA COLOR
