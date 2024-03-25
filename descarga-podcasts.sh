@@ -661,6 +661,76 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/ONDA-COLOR/Green-Bee/green-bee.mp
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
+#DESCARGA PROGRAMAS EXTERNOS RADIO KRAS - GIJON
+
+#SANGRE FUCSIA PARA KRAS
+PODCAST_RSS_URL="https://www.ivoox.com/podcast-sangre-fucsia_fg_f162460_filtro_1.xml"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/RADIO-KRAS/Sangre-Fucsia/sangre-fucsia.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+#INICIATIVA POL ASTURIANO - PARA RADIO KRAS
+PODCAST_RSS_URL="https://www.ivoox.com/podcast-alderiques_fg_f197956_filtro_1.xml"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/RADIO-KRAS/Iniciativa-Pol-Asturiano/iniciativa-pol-asturiano.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+#ENS MOVEM - PARA RADIO KRAS
+PODCAST_RSS_URL="https://www.ivoox.com/podcast-ens-movem_fg_f1699991_filtro_1.xml"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/RADIO-KRAS/Ens-Movem/ens-movem.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+
+#FAT SOUNDS - PARA RADIO KRAS
+PODCAST_RSS_URL="https://www.ivoox.com/podcast-fat-sounds-sonidos-gordos-reggae_fg_f132194_filtro_1.xml"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/RADIO-KRAS/Fat-Sounds/fat-sounds.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+#AIRES CELTAS - PARA RADIO KRAS
+PODCAST_RSS_URL="https://www.ivoox.com/podcast-aires-celtas_fg_f11098750_filtro_1.xml"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/RADIO-KRAS/Aires-Celtas/aires-celtas.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+#POST APOCALIPSIS NAU - PARA RADIO KRAS
+PODCAST_RSS_URL="https://www.ivoox.com/podcast-post-apocalipsis-nau_fg_f1634081_filtro_1.xml"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/RADIO-KRAS/Apocalipsis-Nau/apocalipsis-nau.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+#BARRIO CANINO - PARA RADIO KRAS
+PODCAST_RSS_URL="https://www.ivoox.com/podcast-barrio-canino_fg_f147957_filtro_1.xml"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/RADIO-KRAS/Barrio-Canino/barrio-canino.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+#MAR DE FUEGUITOS - PARA RADIO KRAS
+PODCAST_RSS_URL="https://www.ivoox.com/podcast-programas-mar-fueguitos_fg_f1141927_filtro_1.xml"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/RADIO-KRAS/Mar-De-Fueguitos/mar-de-fueguitos.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+
+#SAHARA DESDE CANARIAS - PARA RADIO KRAS
+PODCAST_RSS_URL="https://www.ivoox.com/podcast-sahara-desde-canarias_fg_f19823_filtro_1.xml"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/RADIO-KRAS/Sahara-Desde-Canarias/sahara-desde-canarias.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+
+#VERICUETOS - PARA RADIO KRAS
+PODCAST_RSS_URL="https://www.ivoox.com/podcast-vericuetos_fg_f1790043_filtro_1.xml"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/RADIO-KRAS/Vericuetos/vericuetos.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+#CINEFAGIA FM - PARA RADIO KRAS
+PODCAST_RSS_URL="https://www.ivoox.com/podcast-cinefagia-fm_fg_f1127454_filtro_1.xml"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/RADIO-KRAS/Cinefagia-FM/cinefagia-fm.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 #DESCARGA DE PROGRAMAS EXTERNOS PARA CUAC - TEMPORADA 2021/2022
 
