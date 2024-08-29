@@ -48,7 +48,7 @@ $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MIN
 #unset FILTRO
 
 #DESCARGA DE DEMOCRACY NOW DIARIO
-PODCAST_RSS_URL="http://www.democracynow.org/podcast-es.xml"
+PODCAST_RSS_URL="https://www.democracynow.org/podcast-emisoras.xml"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Democracy-Now-Diario/democracy-now-diario.mp3"
 DURACION_MINIMA="0"
 
