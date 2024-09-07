@@ -121,7 +121,7 @@ DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 #DESCARGA LOS MEDIATIZADOS
-PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/los-mediatizados/rss/"
+PODCAST_RSS_URL="https://anchor.fm/s/2396eb50/podcast/rss/"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Los-Mediatizados/los-mediatizados.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
