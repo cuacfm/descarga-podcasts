@@ -35,7 +35,7 @@ fi
 declare -a durations
 durations=(`cat "$RSS_FILE_PATH" | grep -o '<itunes:duration>[^<]*' | grep -o '[^>]*$' | sed s/\://g| sed s/^0*//g`)
 declare -a episodes
-episodes=(`cat "$RSS_FILE_PATH" | grep -o '<enclosure.*url="[^"]*' | grep -o '[^"]*$'`)
+episodes=(`cat "$RSS_FILE_PATH" | grep -o '<enclosure[^>]*url="[^"]*' | grep -o '[^"]*$'`)
 declare -a titles
 titles=(`cat "$RSS_FILE_PATH" | grep -o '<itunes:title>[^<]*' | grep -o '[^>]*$'| tr -d ' '`)
 
