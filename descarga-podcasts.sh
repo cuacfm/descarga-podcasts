@@ -766,11 +766,11 @@ $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MIN
 PODCAST_RSS_URL="https://feeds.acast.com/public/shows/63910e8796d1480011f2eaaa"
 FICHERO_DESTINO_A="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Coffee-Break-A/coffeebreak-a.mp3"
 DURACION_MINIMA="0"
-FILTRO="_A:"
+FILTRO="-a-"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO_A" "$DURACION_MINIMA" "$FILTRO"
 FICHERO_DESTINO_B="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Coffee-Break-B/coffeebreak-b.mp3"
 DURACION_MINIMA="0"
-FILTRO="_B:"
+FILTRO="-b-"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO_B" "$DURACION_MINIMA" "$FILTRO"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Coffee-Break/coffeebreak.mp3"
 if [ "$FICHERO_DESTINO_A" -nt "$FICHERO_DESTINO" ];
@@ -779,6 +779,7 @@ then
     rm "$FICHERO_DESTINO"
     ffmpeg -loglevel panic -i "concat:$FICHERO_DESTINO_A|$FICHERO_DESTINO_B" -acodec copy $FICHERO_DESTINO
 fi
+unset FILTRO
 
 #DESCARGA COFFEE BREAK ONDA COLOR
 FICHERO_DESTINO_ONDA_COLOR="/home/cuacfm/ownCloud/Podcast/ONDA-COLOR/Coffee-Break/coffee-break.mp3"
