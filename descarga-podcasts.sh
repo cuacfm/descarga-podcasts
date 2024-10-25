@@ -13,12 +13,6 @@
 
 DESCARGADOR_PRIMER_PODCAST="/home/cuacfm/bin/descarga-podcasts/descarga-primer-podcast-programa.sh"
 
-#DESCARGA DE LA BIBLIOTECA PERDIDA
-PODCAST_RSS_URL="http://www.ivoox.com/podcast-podcast-la-biblioteca-perdida_fg_f171036_filtro_1.xml"
-FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Biblioteca-Perdida/bibliotecaperdida.mp3"
-DURACION_MINIMA="13000"
-$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
-
 #DESCARGA DE CARNE CRUDA
 PODCAST_RSS_URL="http://www.ivoox.com/podcast-carnecruda-es-programas_fg_f157350_filtro_1.xml"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Carne-Cruda/carnecruda.mp3"
@@ -219,12 +213,6 @@ $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MIN
 #DURACION_MINIMA="0"
 #$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
-#DESCARGA LOCO IVAN
-PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/loco-ivan/rss/"
-FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Loco-Ivan/loco-ivan.mp3"
-DURACION_MINIMA="0"
-$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
-
 #DESCARGA ENWORKING
 PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/enworking/rss/"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Enworking/enworking.mp3"
@@ -330,12 +318,6 @@ $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MIN
 #DESCARGA TURBULENCIAS
 PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/turbulencias/rss/"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Turbulencias/turbulencias.mp3"
-DURACION_MINIMA="0"
-$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
-
-#DESCARGA CUIDADO CORAZON
-PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/cuidado-corazon/rss/"
-FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Cuidado-Corazon/cuidado-corazon.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
@@ -518,6 +500,13 @@ PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/frecuencia-electronica/rs
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Frecuencia-Electronica/frecuencia-electronica.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+#DESCARGA LLAMANDO A LA TIERRA
+PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/llamando-a-la-tierra/rss/"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Llamando-A-La-Tierra/llamando-a-la-tierra.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
 
 #PETICIONES PODCAST ONDA COLOR
 # DESCARGA SANGRE FUCSIA PARA ONDACOLOR
