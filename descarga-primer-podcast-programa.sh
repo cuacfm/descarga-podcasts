@@ -19,8 +19,7 @@ if [[ $PODCAST_RSS_URL =~ .*mixcloud.com.* ]]; then
     MIXCLOUD=1
 else
     # Downloading RSS
-    # wget -q -O "$RSS_FILE_PATH" "$PODCAST_RSS_URL"
-    wget --no-check-certificate -q -O "$RSS_FILE_PATH" "$PODCAST_RSS_URL"
+    curl -L -o "$RSS_FILE_PATH" "$PODCAST_RSS_URL"
 fi
 #if [[ $PODCAST_RSS_URL =~ .*ivoox.com.* ]]; then
     # We sleep for 1 seconds between request
@@ -116,8 +115,8 @@ fi
 
 if [ "$NEWEPISODE" == 1 ]; then
     echo "`$DATE_CMD` - [$TARGET_FILENAME][INFO] Downloaded selected episode $SELECTED_DOWNLOAD with $i duration"
-    # wget -q -O "$TARGET_DOWNLOAD_PATH" "$SELECTED_DOWNLOAD"
-    wget --no-check-certificate -q -O "$TARGET_DOWNLOAD_PATH" "$SELECTED_DOWNLOAD"
+    # wget -q -O "$TARGET_DOWNLOAD_PATH" "$SELECTED_DOWNLOAD"   
+    curl -L -o "$TARGET_DOWNLOAD_PATH" "$SELECTED_DOWNLOAD"
     echo "$SELECTED_DOWNLOAD" > "$TARGET_PATH.lastdownload.txt"
     if [ "$TARGET_DOWNLOAD_PATH" != "$TARGET_PATH" ]; then
        echo "`$DATE_CMD` - [$TARGET_FILENAME][INFO] Convirtiendo $SELECTED_DOWNLOAD de $EXTENSION_RSS a $EXTENSION_TARGET"
