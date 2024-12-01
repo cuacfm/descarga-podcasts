@@ -120,6 +120,19 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Los-Mediatizad
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
+#DESCARGA DESCIFRANDO A HISTORIA
+PODCAST_RSS_URL="https://www.ivoox.com/feed_fg_f11062871_filtro_1.xml"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Descifrando-a-historia/descifrando-a-historia.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+#DESCARGA GALIPORTUS
+PODCAST_RSS_URL="https://www.ivoox.com/feed_fg_f12050026_filtro_1.xml"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Galiportus/galiportus.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+
 
 # REDIFUSIONES PROGRAMAS INTERNOS
 
