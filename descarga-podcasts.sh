@@ -352,6 +352,30 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/La-Ciencia-es-Femenino/la-
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
+#Bloque para copiar el La-Ciencia-Es-Femenino al comun de la-ciencia-es-femenino-radio-parafuso
+if [ -f $FICHERO_DESTINO ]
+then
+    ULTIMA_FECHA_DESCARGA_PODCAST=`date +%Y-%m-%d-%H:%M -r "$FICHERO_DESTINO"`
+    FICHERO_COMUN="/home/cuacfm/ownCloud/Podcast/CUACFM/La-Ciencia-Es-Femenino-Parafuso/la-ciencia-es-femenino-radio-parafuso.mp3"
+    if [ ! -f $FICHERO_COMUN ]
+    then
+	echo "Creando $FICHERO_COMUN con $FICHERO_DESTINO"
+	DIRECTORIO_COMUN=$(dirname "${FICHERO_COMUN}")
+	if [ ! -d $DIRECTORIO_COMUN ]
+	then
+	    mkdir -p $DIRECTORIO_COMUN
+	fi
+	cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
+    fi
+
+    ULTIMA_FECHA_FICHERO_COMUN=`date +%Y-%m-%d-%H:%M -r "$FICHERO_COMUN"`
+    if [[ "$ULTIMA_FECHA_FICHERO_COMUN" < "$ULTIMA_FECHA_DESCARGA_PODCAST" ]]
+    then
+	echo "Subtituyendo $FICHERO_COMUN con $FICHERO_DESTINO"
+	cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
+    fi
+fi
+
 #DESCARGA Bipolares
 PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/bipolares/rss/"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Bipolares/bipolares.mp3"
@@ -525,6 +549,32 @@ PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/radio-parafuso/rss/"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Radio-Parafuso/radioparafuso.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+#Bloque para copiar el Radio Parafuso al comun de la-ciencia-es-femenino-radio-parafuso
+if [ -f $FICHERO_DESTINO ]
+then
+    ULTIMA_FECHA_DESCARGA_PODCAST=`date +%Y-%m-%d-%H:%M -r "$FICHERO_DESTINO"`
+    FICHERO_COMUN="/home/cuacfm/ownCloud/Podcast/CUACFM/La-Ciencia-Es-Femenino-Parafuso/la-ciencia-es-femenino-radio-parafuso.mp3"
+    if [ ! -f $FICHERO_COMUN ]
+    then
+	echo "Creando $FICHERO_COMUN con $FICHERO_DESTINO"
+	DIRECTORIO_COMUN=$(dirname "${FICHERO_COMUN}")
+	if [ ! -d $DIRECTORIO_COMUN ]
+	then
+	    mkdir -p $DIRECTORIO_COMUN
+	fi
+	cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
+    fi
+
+    ULTIMA_FECHA_FICHERO_COMUN=`date +%Y-%m-%d-%H:%M -r "$FICHERO_COMUN"`
+    if [[ "$ULTIMA_FECHA_FICHERO_COMUN" < "$ULTIMA_FECHA_DESCARGA_PODCAST" ]]
+    then
+	echo "Subtituyendo $FICHERO_COMUN con $FICHERO_DESTINO"
+	cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
+    fi
+fi
+
+
 
 
 #PETICIONES PODCAST ONDA COLOR
