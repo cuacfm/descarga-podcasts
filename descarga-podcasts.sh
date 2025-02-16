@@ -574,6 +574,11 @@ then
     fi
 fi
 
+#DESCARGA ESTRELADOS NA ESTRATOSFERA
+PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/estrelados-na-estratosfera/rss/"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Estrelados-Na-Estratosfera/estrelados-na-estratosfera.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 
 
