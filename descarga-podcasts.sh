@@ -739,6 +739,13 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/ONDA-COLOR/Palma-Y-Romeros/palma-
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
+#DESCARGA DE ENTRE LETRAS PARA ONDA COLOR
+PODCAST_RSS_URL="https://www.ivoox.com/feed_fg_f12575072_filtro_1.xml"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/ONDA-COLOR/Entre-Letras/entre-letras.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+
 #DESCARGA DE THE GREEN BEE
 PODCAST_RSS_URL="https://anchor.fm/s/d95804ec/podcast/rss"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/ONDA-COLOR/Green-Bee/green-bee.mp3"
