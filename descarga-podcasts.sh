@@ -134,7 +134,7 @@ $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MIN
 
 #DESCARGA NOTICIAS DE A CORUÑA
 PODCAST_RSS_URL="https://anchor.fm/s/e7855790/podcast/rss"
-FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Noticias-De-A-Coruña/noticias-de-a-coruña.mp3"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Noticias-De-A-Coruña/noticias-de-coruña.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
