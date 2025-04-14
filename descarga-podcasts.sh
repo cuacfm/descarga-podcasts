@@ -598,6 +598,12 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Radio-Ceus/radio-ceus.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
+#DESCARGA ACROBACIAS SOBRE UN QUESO RANCIO
+PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/acrobacias-sobre-un-queso-rancio/rss/"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Acrobacias-Sobre-Un-Queso-Rancio/acrobacias-sobre-un-queso-rancio.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
 
 #PETICIONES PODCAST ONDA COLOR
 # DESCARGA SANGRE FUCSIA PARA ONDACOLOR
