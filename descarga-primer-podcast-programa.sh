@@ -22,10 +22,10 @@ else
     # Downloading RSS
     curl -s -L -o "$RSS_FILE_PATH" "$PODCAST_RSS_URL?$DATE_URL"
 fi
-#if [[ $PODCAST_RSS_URL =~ .*ivoox.com.* ]]; then
+if [[ $PODCAST_RSS_URL =~ .*ivoox.com.* ]]; then
     # We sleep for 1 seconds between request
-#    sleep 1
-#fi
+    sleep 1
+fi
 
 if [ $? != 0 ]; then
     echo "`$DATE_CMD` - [$TARGET_FILENAME][ERROR] Not available RSS URL $PODCAST_RSS_URL"
