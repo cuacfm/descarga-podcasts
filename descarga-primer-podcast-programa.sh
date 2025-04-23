@@ -12,6 +12,7 @@ TARGET_DIR=$( dirname "$TARGET_PATH" )
 RSS_FILE_PATH=/var/tmp/$TARGET_FILENAME.rss
 
 DATE_CMD="date --rfc-3339=seconds"
+DATE_URL=`date +%s`
 
 if [[ $PODCAST_RSS_URL =~ .*mixcloud.com.* ]]; then
     # Downloading RSS from mixcloud
@@ -19,7 +20,7 @@ if [[ $PODCAST_RSS_URL =~ .*mixcloud.com.* ]]; then
     MIXCLOUD=1
 else
     # Downloading RSS
-    curl -s -L -o "$RSS_FILE_PATH" "$PODCAST_RSS_URL"
+    curl -s -L -o "$RSS_FILE_PATH" "$PODCAST_RSS_URL?$DATE_URL"
 fi
 #if [[ $PODCAST_RSS_URL =~ .*ivoox.com.* ]]; then
     # We sleep for 1 seconds between request
