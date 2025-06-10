@@ -616,6 +616,18 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/El-Malinformado/el-malinfo
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
+#DESCARGA 2D6
+PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/2d6/rss/"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/2d6/2d6.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+#DESCARGA RADIO RELATOS
+PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/radio-relatos/rss/"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Radio-Relatos/radio-relatos.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
 #PETICIONES PODCAST ONDA COLOR
 # DESCARGA SANGRE FUCSIA PARA ONDACOLOR
 PODCAST_RSS_URL="http://www.ivoox.com/podcast-sangre-fucsia_fg_f162460_filtro_1.xml"
