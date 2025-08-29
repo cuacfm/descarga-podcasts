@@ -950,3 +950,9 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Fora-de-mapa/f
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
+#DESCARGA DE UNIVERSO DE MISTERIOS
+PODCAST_RSS_URL="https://www.ivoox.com/feed_fg_f1426304_filtro_1.xml"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Universo-De-Misterios/universodemisterios.mp3"
+DURACION_MINIMA="2000"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
