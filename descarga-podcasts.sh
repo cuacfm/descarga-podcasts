@@ -385,7 +385,6 @@ then
 	echo "Subtituyendo $FICHERO_COMUN con $FICHERO_DESTINO"
 	cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
     fi
-fi
 
 #DESCARGA Bipolares
 PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/bipolares/rss/"
@@ -620,6 +619,29 @@ PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/el-malinformado/rss/"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/El-Malinformado/el-malinformado.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+#Bloque para copiar el El Malinformado al comun de el-malinformado-la-taberna-de-la-verdad
+if [ -f $FICHERO_DESTINO ]
+then
+    ULTIMA_FECHA_DESCARGA_PODCAST=`date +%Y-%m-%d-%H:%M -r "$FICHERO_DESTINO"`
+    FICHERO_COMUN="/home/cuacfm/ownCloud/Podcast/CUACFM/El-Malinformado-La-Taberna-De-La-Verdad/el-malinformado-la-taberna-de-la-verdad.mp3"
+    if [ ! -f $FICHERO_COMUN ]
+    then
+	echo "Creando $FICHERO_COMUN con $FICHERO_DESTINO"
+	DIRECTORIO_COMUN=$(dirname "${FICHERO_COMUN}")
+	if [ ! -d $DIRECTORIO_COMUN ]
+	then
+	    mkdir -p $DIRECTORIO_COMUN
+	fi
+	cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
+    fi
+
+    ULTIMA_FECHA_FICHERO_COMUN=`date +%Y-%m-%d-%H:%M -r "$FICHERO_COMUN"`
+    if [[ "$ULTIMA_FECHA_FICHERO_COMUN" < "$ULTIMA_FECHA_DESCARGA_PODCAST" ]]
+    then
+	echo "Subtituyendo $FICHERO_COMUN con $FICHERO_DESTINO"
+	cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
+    fi
 
 #DESCARGA 2D6
 PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/2d6/rss/"
