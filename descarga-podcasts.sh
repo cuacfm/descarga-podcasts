@@ -663,7 +663,7 @@ $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MIN
 
 #DESCARGA LA TABERNA DE LA VERDAD
 PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/la-taberna-de-la-verdad/rss/"
-FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/La-Taberna-De-La-Verdad/taberna.mp3"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/La-Taberna-De-La-Verdad/la-taberna-de-la-verdad.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
