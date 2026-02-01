@@ -483,11 +483,11 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/La-Novena-Puerta/la-novena
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
-#Bloque para copiar el Novena Puerta al comun de novena-puerta-ecuacion
+#Bloque comun de ecuacion-radio-ceus
 if [ -f $FICHERO_DESTINO ]
 then
     ULTIMA_FECHA_DESCARGA_PODCAST=`date +%Y-%m-%d-%H:%M -r "$FICHERO_DESTINO"`
-    FICHERO_COMUN="/home/cuacfm/ownCloud/Podcast/CUACFM/La-Novena-Puerta-Ecuacion/la-novena-puerta-ecuacion.mp3"
+    FICHERO_COMUN="/home/cuacfm/ownCloud/Podcast/CUACFM/Ecuacion-Radio-Ceus/ecuacion-radio-ceus.mp3"
     if [ ! -f $FICHERO_COMUN ]
     then
 	echo "Creando $FICHERO_COMUN con $FICHERO_DESTINO"
