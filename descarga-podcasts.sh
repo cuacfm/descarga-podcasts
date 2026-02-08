@@ -483,41 +483,17 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/La-Novena-Puerta/la-novena
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
-#Bloque comun de ecuacion-radio-ceus
-if [ -f $FICHERO_DESTINO ]
-then
-    ULTIMA_FECHA_DESCARGA_PODCAST=`date +%Y-%m-%d-%H:%M -r "$FICHERO_DESTINO"`
-    FICHERO_COMUN="/home/cuacfm/ownCloud/Podcast/CUACFM/Ecuacion-Radio-Ceus/ecuacion-radio-ceus.mp3"
-    if [ ! -f $FICHERO_COMUN ]
-    then
-	echo "Creando $FICHERO_COMUN con $FICHERO_DESTINO"
-	DIRECTORIO_COMUN=$(dirname "${FICHERO_COMUN}")
-	if [ ! -d $DIRECTORIO_COMUN ]
-	then
-	    mkdir -p $DIRECTORIO_COMUN
-	fi
-	cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
-    fi
-
-    ULTIMA_FECHA_FICHERO_COMUN=`date +%Y-%m-%d-%H:%M -r "$FICHERO_COMUN"`
-    if [[ "$ULTIMA_FECHA_FICHERO_COMUN" < "$ULTIMA_FECHA_DESCARGA_PODCAST" ]]
-    then
-	echo "Subtituyendo $FICHERO_COMUN con $FICHERO_DESTINO"
-	cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
-    fi
-fi
-
 #DESCARGA DE ECUACION
 PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/ecuacion/rss/"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Ecuacion/ecuacion.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
-#Bloque para copiar el Ecuacion al comun de novena-puerta-ecuacion
+#Bloque comun de ecuacion-radio-ceus
 if [ -f $FICHERO_DESTINO ]
 then
     ULTIMA_FECHA_DESCARGA_PODCAST=`date +%Y-%m-%d-%H:%M -r "$FICHERO_DESTINO"`
-    FICHERO_COMUN="/home/cuacfm/ownCloud/Podcast/CUACFM/La-Novena-Puerta-Ecuacion/la-novena-puerta-ecuacion.mp3"
+    FICHERO_COMUN="/home/cuacfm/ownCloud/Podcast/CUACFM/Ecuacion-Radio-Ceus/ecuacion-radio-ceus.mp3"
     if [ ! -f $FICHERO_COMUN ]
     then
 	echo "Creando $FICHERO_COMUN con $FICHERO_DESTINO"
@@ -602,6 +578,31 @@ PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/radio-ceus/rss/"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Radio-Ceus/radio-ceus.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+#Bloque comun de ecuacion-radio-ceus
+if [ -f $FICHERO_DESTINO ]
+then
+    ULTIMA_FECHA_DESCARGA_PODCAST=`date +%Y-%m-%d-%H:%M -r "$FICHERO_DESTINO"`
+    FICHERO_COMUN="/home/cuacfm/ownCloud/Podcast/CUACFM/Ecuacion-Radio-Ceus/ecuacion-radio-ceus.mp3"
+    if [ ! -f $FICHERO_COMUN ]
+    then
+	echo "Creando $FICHERO_COMUN con $FICHERO_DESTINO"
+	DIRECTORIO_COMUN=$(dirname "${FICHERO_COMUN}")
+	if [ ! -d $DIRECTORIO_COMUN ]
+	then
+	    mkdir -p $DIRECTORIO_COMUN
+	fi
+	cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
+    fi
+
+    ULTIMA_FECHA_FICHERO_COMUN=`date +%Y-%m-%d-%H:%M -r "$FICHERO_COMUN"`
+    if [[ "$ULTIMA_FECHA_FICHERO_COMUN" < "$ULTIMA_FECHA_DESCARGA_PODCAST" ]]
+    then
+	echo "Subtituyendo $FICHERO_COMUN con $FICHERO_DESTINO"
+	cp -a "$FICHERO_DESTINO" "$FICHERO_COMUN"
+    fi
+fi
+
 
 #DESCARGA ACROBACIAS SOBRE UN QUESO RANCIO
 PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/acrobacias-sobre-un-queso-rancio/rss/"
