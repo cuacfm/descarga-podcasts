@@ -660,7 +660,7 @@ $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MIN
 
 #DESCARGA TINTA Y VOZ
 PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/tinta-y-voz/rss/"
-FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Radio-Relatos/tinta-y-voz.mp3"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Tinta-y-voz/tinta-y-voz.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
