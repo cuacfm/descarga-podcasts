@@ -1007,14 +1007,17 @@ DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 #DESCARGA DE COFFEE BREAK
-PODCAST_RSS_URL="https://feeds.acast.com/public/shows/63910e8796d1480011f2eaaa"
+# Feed migrado 2026-03: el show-id viejo (63910e8796d1480011f2eaaa) quedou conxelado
+# en ep550. O feed activo e por slug. As partes A/B agora distinguense so no titulo
+# (EpNNN_A: / EpNNN_B:), non na URL do enclosure (todas .../media.mp3) -> filtro _A: / _B:
+PODCAST_RSS_URL="https://feeds.acast.com/public/shows/coffee-break-senal-y-ruido"
 FICHERO_DESTINO_A="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Coffee-Break-A/coffeebreak-a.mp3"
 DURACION_MINIMA="0"
-FILTRO="-a-"
+FILTRO="_A:"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO_A" "$DURACION_MINIMA" "$FILTRO"
 FICHERO_DESTINO_B="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Coffee-Break-B/coffeebreak-b.mp3"
 DURACION_MINIMA="0"
-FILTRO="-b-"
+FILTRO="_B:"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO_B" "$DURACION_MINIMA" "$FILTRO"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Coffee-Break/coffeebreak.mp3"
 if [ "$FICHERO_DESTINO_A" -nt "$FICHERO_DESTINO" ];
