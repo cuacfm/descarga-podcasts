@@ -742,6 +742,12 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Latido-Jaime/latido-jaime.
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
+#DESCARGA ARTÉXTASIS
+PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/artextasis/rss/"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Artextasis/artextasis.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
 #PETICIONES PODCAST ONDA COLOR
 # DESCARGA SANGRE FUCSIA PARA ONDACOLOR
 PODCAST_RSS_URL="http://www.ivoox.com/podcast-sangre-fucsia_fg_f162460_filtro_1.xml"
