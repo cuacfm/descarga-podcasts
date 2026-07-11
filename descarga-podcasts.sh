@@ -1080,6 +1080,12 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Alcarria-Savag
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
+#DESCARGA DE ACARRIA SAVAGE TUNES MODO ALEATORIO
+PODCAST_RSS_URL="https://www.ivoox.com/podcast-alcarria-savage-tunes_sq_f19230_1.html"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Alcarria-Savage-Tunes-Aleatorio/alcarriasavagetunesaleatorio.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
 #DESCARGA DE FÓRA DE MAPA
 PODCAST_RSS_URL="https://anchor.fm/s/4bcefa54/podcast/rss"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Fora-de-mapa/forademapa.mp3"
