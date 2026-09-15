@@ -14,7 +14,9 @@
 DESCARGADOR_PRIMER_PODCAST="/home/cuacfm/bin/descarga-podcasts/descarga-primer-podcast-programa.sh"
 
 #DESCARGA DE CARNE CRUDA
-PODCAST_RSS_URL="http://www.ivoox.com/podcast-carnecruda-es-programas_fg_f157350_filtro_1.xml"
+# 2026-09-15: iVoox deixou de sindicar este filtro (último episodio 04-ago,
+# aínda que a web segue publicando). Feed oficial do editor en Acast.
+PODCAST_RSS_URL="https://feeds.acast.com/public/shows/carne-cruda-programas"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Carne-Cruda/carnecruda.mp3"
 DURACION_MINIMA="5000"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
@@ -786,7 +788,9 @@ DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 #DESCARGA DE CARNE CRUDA ONDACOLOR
-PODCAST_RSS_URL="http://www.ivoox.com/podcast-carnecruda-es-programas_fg_f157350_filtro_1.xml"
+# 2026-09-15: iVoox deixou de sindicar este filtro (último episodio 04-ago,
+# aínda que a web segue publicando). Feed oficial do editor en Acast.
+PODCAST_RSS_URL="https://feeds.acast.com/public/shows/carne-cruda-programas"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Carne-Cruda/carnecruda.mp3"
 DURACION_MINIMA="5000"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
