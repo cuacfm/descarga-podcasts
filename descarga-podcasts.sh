@@ -22,14 +22,14 @@ DURACION_MINIMA="5000"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 #DESCARGA DE RADIO CERNA
-PODCAST_RSS_URL="http://www.ivoox.com/podcast-podcast-radio-cerna_fg_f18577_filtro_1.xml"
+PODCAST_RSS_URL="https://www.ivoox.com/podcast-podcast-radio-cerna_fg_f18577_filtro_1.xml"
 #PODCAST_RSS_USL_NO_FUNCIONA="http://adega.gal/web/radiocerna/podcast.php?idioma=gl"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Radio-Cerna/radio-cerna.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 #DESCARGA DE DEMOCRACY NOW BLOG RESUMEN SEMANAL
-PODCAST_RSS_URL="http://audio.urcm.net/spip.php?page=backend&id_rubrique=64"
+PODCAST_RSS_URL="https://audio.urcm.net/spip.php?page=backend&id_rubrique=64"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Democracy-Now-Blog/democracy-now-blog.mp3"
 DURACION_MINIMA="0"
 #FILTRO="resumen_semanal"
@@ -51,13 +51,13 @@ DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 #DESCARGA AMNISTIA INTERNACIONAL - LO USA ONDA COLOR TAMBIEN
-PODCAST_RSS_URL="http://audio.urcm.net/spip.php?page=backend&id_rubrique=1"
+PODCAST_RSS_URL="https://audio.urcm.net/spip.php?page=backend&id_rubrique=1"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Amnistia-Internacional/amnistia-internacional.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 #DESCARGA DE ABRETE DE ORELLAS
-PODCAST_RSS_URL="http://www.ivoox.com/abrete-orellas_fg_f186732_filtro_1.xml"
+PODCAST_RSS_URL="https://www.ivoox.com/abrete-orellas_fg_f186732_filtro_1.xml"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Abrete-De-Orellas/abrete-de-orellas.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
@@ -71,7 +71,7 @@ $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MIN
 #DATE_NEO_ENTREVISTAS=`date +%Y-%m-%d-%H:%M -r "$FICHERO_DESTINO"`
 
 #DESCARGA DE PROXECTO NEO
-PODCAST_RSS_URL="http://www.ivoox.com/podcast-proxecto-neo_fg_f1131749_filtro_1.xml"
+PODCAST_RSS_URL="https://www.ivoox.com/podcast-proxecto-neo_fg_f1131749_filtro_1.xml"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Proxecto-Neo/proxecto-neo.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
@@ -87,25 +87,25 @@ $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MIN
 #fi
 
 #DESCARGA DE LA RADIO DE LOS GATOS - ASPACE
-PODCAST_RSS_URL="http://www.ivoox.com/radio-gatos-aspace_fg_f1458835_filtro_1.xml"
+PODCAST_RSS_URL="https://www.ivoox.com/radio-gatos-aspace_fg_f1458835_filtro_1.xml"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/La-Radio-De-Los-Gatos/la-radio-de-los-gatos.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 #DESCARGA DE MAR DE FUEGUITOS
-PODCAST_RSS_URL="http://www.ivoox.com/programas-mar-fueguitos_fg_f1141927_filtro_1.xml"
+PODCAST_RSS_URL="https://www.ivoox.com/programas-mar-fueguitos_fg_f1141927_filtro_1.xml"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Mar-de-Fueguitos/mar-de-fueguitos.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 #DESCARGA DE LA CAFETERA RADIOCABLE
-PODCAST_RSS_URL="http://www.spreaker.com/user/5647623/episodes/feed"
+PODCAST_RSS_URL="https://www.spreaker.com/user/5647623/episodes/feed"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Cafetera-RadioCable/cafetera-radiocable.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 #DESCARGA DE GRANDES VOCES DO NOSO MUNDO
-PODCAST_RSS_URL="http://www.ivoox.com/grandes-voces-do-noso-mundo_fg_f1139260_filtro_1.xml"
+PODCAST_RSS_URL="https://www.ivoox.com/grandes-voces-do-noso-mundo_fg_f1139260_filtro_1.xml"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Grandes-Voces-Do-Noso-Mundo/grandes-voces-do-noso-mundo.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
@@ -764,25 +764,25 @@ $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MIN
 
 #PETICIONES PODCAST ONDA COLOR
 # DESCARGA SANGRE FUCSIA PARA ONDACOLOR
-PODCAST_RSS_URL="http://www.ivoox.com/podcast-sangre-fucsia_fg_f162460_filtro_1.xml"
+PODCAST_RSS_URL="https://www.ivoox.com/podcast-sangre-fucsia_fg_f162460_filtro_1.xml"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Agora-Sol/Sangre-Fucsia/sangre-fucsia.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 # DESCARGA SIETE PULGADAS PARA ONDACOLOR
-PODCAST_RSS_URL="http://www.ivoox.com/podcast-7-pulgadas-reggae-radio_fg_f198949_filtro_1.xml"
+PODCAST_RSS_URL="https://www.ivoox.com/podcast-7-pulgadas-reggae-radio_fg_f198949_filtro_1.xml"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Siete-Pulgadas/siete-pulgadas.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 # DESCARGA NOSOTRAS LAS PERSONAS PARA ONDACOLOR
-PODCAST_RSS_URL="http://audio.urcm.net/spip.php?page=backend&id_rubrique=121"
+PODCAST_RSS_URL="https://audio.urcm.net/spip.php?page=backend&id_rubrique=121"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Radio-Pimienta/Nosotras-Las-Personas/nosotras-las-personas.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 # DESCARGA LETRAS Y NOTAS PARA ONDACOLOR REPETIDO
-PODCAST_RSS_URL="http://www.ivoox.com/podcast-podcast-letras-notas_fg_f172378_filtro_1.xml"
+PODCAST_RSS_URL="https://www.ivoox.com/podcast-podcast-letras-notas_fg_f172378_filtro_1.xml"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Radio-Circulo/Letras-Y-Notas/letras-y-notas.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
@@ -812,7 +812,7 @@ DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 # DESCARGA LETRAS Y NOTAS PARA ONDACOLOR
-PODCAST_RSS_URL="http://www.ivoox.com/podcast-podcast-letras-notas_fg_f172378_filtro_1.xml"
+PODCAST_RSS_URL="https://www.ivoox.com/podcast-podcast-letras-notas_fg_f172378_filtro_1.xml"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/ONDA-COLOR/Letras-Y-Notas/letras-y-notas.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
@@ -848,13 +848,13 @@ DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 #DESCARGA AMNISTIA INTERNACIONAL PARA ONDA COLOR
-PODCAST_RSS_URL="http://audio.urcm.net/spip.php?page=backend&id_rubrique=1"
+PODCAST_RSS_URL="https://audio.urcm.net/spip.php?page=backend&id_rubrique=1"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/ONDA-COLOR/Amnistia-Internacional/amnistia-internacional.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 #DESCARGA DE DEMOCRACY NOW BLOG RESUMEN SEMANAL PARA ONDA COLOR
-PODCAST_RSS_URL="http://audio.urcm.net/spip.php?page=backend&id_rubrique=64"
+PODCAST_RSS_URL="https://audio.urcm.net/spip.php?page=backend&id_rubrique=64"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/ONDA-COLOR/Democracy-Now-Blog/democracy-now-blog.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA" 
