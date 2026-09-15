@@ -797,7 +797,10 @@ $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MIN
 
 
 #DESCARGA RED REFUGIO ONDA COLOR
-PODCAST_RSS_URL="https://www.ivoox.com/podcast-red-refugio_fg_f1585844_filtro_1.xml"
+# 2026-09-15: o filtro f1585844 desapareceu de iVoox (404 no XML e na páxina).
+# O podcast segue aí con outro id: f11049926 (feed declarado pola propia
+# páxina https://www.ivoox.com/podcast-red-refugio_sq_f11049926_1.html).
+PODCAST_RSS_URL="https://feeds.ivoox.com/feed_fg_f11049926_filtro_1.xml"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/ONDA-COLOR/Red-Refugio/red-refugio.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
