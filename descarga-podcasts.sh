@@ -129,10 +129,28 @@ DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 #DESCARGA GALIPORTUS
-PODCAST_RSS_URL="https://www.ivoox.com/feed_fg_f12050026_filtro_1.xml"
+#DESCARGA GALIPORTUS (programa principal): por duración, >= 30 min
+PODCAST_RSS_URL="https://feeds.ivoox.com/feed_fg_f12050026_filtro_1.xml"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Galiportus/galiportus.mp3"
-DURACION_MINIMA="0"
+DURACION_MINIMA="3000"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+#DESCARGA GALIPORTUS: HISTORIA E HISTORIAS (por URL)
+PODCAST_RSS_URL="https://feeds.ivoox.com/feed_fg_f12050026_filtro_1.xml"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Galiportus-Historia/galiportus-historia.mp3"
+DURACION_MINIMA="0"
+FILTRO="glp-h-h-s"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA" "$FILTRO"
+
+#DESCARGA GALIPORTUS: O APARTE (por URL)
+PODCAST_RSS_URL="https://feeds.ivoox.com/feed_fg_f12050026_filtro_1.xml"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Galiportus-O-Aparte/o-aparte.mp3"
+DURACION_MINIMA="0"
+FILTRO="o-aparte"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA" "$FILTRO"
+unset FILTRO
+
+
 
 #DESCARGA NOTICIAS DE A CORUÑA
 PODCAST_RSS_URL="https://anchor.fm/s/e7855790/podcast/rss"
