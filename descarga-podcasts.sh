@@ -1015,6 +1015,13 @@ PODCAST_RSS_URL="https://www.ivoox.com/feed_fg_f12743469_filtro_1.xml"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/RADIO-KRAS/Women-Riot/women-riot.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+#ALDERIQUES TWITCH EN VIDEU - PARA RADIO KRAS
+# Feed RSS do programa en Spotify for Creators (o audio é MP3 aínda que en Spotify sexa vídeo)
+PODCAST_RSS_URL="https://anchor.fm/s/10619a9f4/podcast/rss"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/RADIO-KRAS/Alderiques-Twitch/alderiques-twitch.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
  
 
 #DESCARGA DE PROGRAMAS EXTERNOS PARA CUAC - TEMPORADA 2021/2022
