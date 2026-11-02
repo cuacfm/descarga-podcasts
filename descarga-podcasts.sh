@@ -129,11 +129,14 @@ DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
 #DESCARGA GALIPORTUS
-#DESCARGA GALIPORTUS (programa principal): por duración, >= 30 min
+#DESCARGA GALIPORTUS (programa principal): por duración, >= 30 min, sen O Aparte
+# (algún episodio de O Aparte pasa de 30 min, p. ex. o Ep. 24 de 44:27)
 PODCAST_RSS_URL="https://feeds.ivoox.com/feed_fg_f12050026_filtro_1.xml"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Galiportus/galiportus.mp3"
 DURACION_MINIMA="3000"
-$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+EXCLUIR="O APARTE"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA" "" "$EXCLUIR"
+unset EXCLUIR
 
 #DESCARGA GALIPORTUS: HISTORIA E HISTORIAS (por URL)
 PODCAST_RSS_URL="https://feeds.ivoox.com/feed_fg_f12050026_filtro_1.xml"
