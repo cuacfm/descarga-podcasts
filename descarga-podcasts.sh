@@ -10,6 +10,12 @@
 # Luego simplemente deberíamos ejecutar la línea de descargar los podcasts.
 #
 #  /home/cuacfm/bin/descarga-primer-podcast-programa.sh "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA" "$FILTRO"
+#
+# Para que un mismo podcast llegue a varias radios con una sola descarga, se ponen
+# las rutas de copia en COPIAS y se pasan detrás de FILTRO y EXCLUIR (vacíos si no se usan):
+#
+#  COPIAS=("/ruta/radio-1/fichero.mp3" "/ruta/radio-2/fichero.mp3")
+#  $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA" "" "" "${COPIAS[@]}"
 
 DESCARGADOR_PRIMER_PODCAST="/home/cuacfm/bin/descarga-podcasts/descarga-primer-podcast-programa.sh"
 
@@ -167,11 +173,13 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Sabados-No-Cru
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
-#DESCARGA INFORMATIVO SAHARAUI
+#DESCARGA INFORMATIVO SAHARAUI (TAMBIEN PARA ONDA COLOR Y RADIO KRAS)
 PODCAST_RSS_URL="https://feeds.ivoox.com/feed_fg_f13212038_filtro_1.xml"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Informativo-Saharaui/informativo-saharaui.mp3"
 DURACION_MINIMA="0"
-$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+COPIAS=("/home/cuacfm/ownCloud/Podcast/ONDA-COLOR/Informativo-Saharaui/informativo-saharaui.mp3"
+        "/home/cuacfm/ownCloud/Podcast/RADIO-KRAS/Informativo-Saharaui/informativo-saharaui.mp3")
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA" "" "" "${COPIAS[@]}"
 
 #DESCARGA RECUNCHO GAMER PODCAST
 PODCAST_RSS_URL="https://feeds.ivoox.com/feed_fg_f11092284_filtro_1.xml"

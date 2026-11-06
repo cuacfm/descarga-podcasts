@@ -3,12 +3,15 @@
 # higher to the defined as parameter in the format hhmmss
 # Optional: FILTER selects episodes whose URL or title contains it,
 # EXCLUDE skips episodes whose title contains it
+# Optional: from the 6th argument on, paths where the downloaded episode is
+# copied (one download shared by several radios)
 
 PODCAST_RSS_URL="$1"
 TARGET_PATH="$2"
 EPISODE_MIN_DURATION=$3
 FILTER="$4"
 EXCLUDE="$5"
+COPY_PATHS=("${@:6}")
 
 TARGET_FILENAME=$( basename "$TARGET_PATH" )
 TARGET_DIR=$( dirname "$TARGET_PATH" )
@@ -163,4 +166,23 @@ if [ "$NEWEPISODE" == 1 ]; then
     echo "$SELECTED_DOWNLOAD" > "$TARGET_PATH.lastdownload.txt"
 else
   echo "`$DATE_CMD` - [$TARGET_FILENAME][INFO] No new episodes"
+fi
+
+# Copies: refreshed whenever their lastdownload differs from the main file's,
+# so a new copy path gets the current episode on the next run
+if [ -f "$TARGET_PATH" ] && [ -f "$TARGET_PATH.lastdownload.txt" ]; then
+    for COPY_PATH in "${COPY_PATHS[@]}"; do
+        [ -z "$COPY_PATH" ] && continue
+        if [ -f "$COPY_PATH" ] && cmp -s "$TARGET_PATH.lastdownload.txt" "$COPY_PATH.lastdownload.txt"; then
+            continue
+        fi
+        mkdir -p "$( dirname "$COPY_PATH" )"
+        if cp -f "$TARGET_PATH" "$COPY_PATH.part" && mv -f "$COPY_PATH.part" "$COPY_PATH"; then
+            cp -f "$TARGET_PATH.lastdownload.txt" "$COPY_PATH.lastdownload.txt"
+            echo "`$DATE_CMD` - [$TARGET_FILENAME][INFO] Copied to $COPY_PATH"
+        else
+            echo "`$DATE_CMD` - [$TARGET_FILENAME][ERROR] Failed copy to $COPY_PATH"
+            rm -f "$COPY_PATH.part"
+        fi
+    done
 fi
