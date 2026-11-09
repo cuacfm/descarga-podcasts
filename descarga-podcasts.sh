@@ -162,7 +162,10 @@ unset FILTRO
 
 
 #DESCARGA NOTICIAS DE A CORUÑA
-PODCAST_RSS_URL="https://anchor.fm/s/e7855790/podcast/rss"
+# Desde 2026-11-09 el programa se publica en RadioCo (lo genera la GitHub Action de ai-news-api y lo
+# publica radioco-externos en plucas); el feed antiguo de Spotify/Anchor (anchor.fm/s/e7855790) quedó
+# parado en enero de 2026. Siempre se baja la última edición publicada.
+PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/noticias-de-coruna/rss/"
 FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/Programas-Externos/Noticias-De-A-Coruña/noticias-de-coruña.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
