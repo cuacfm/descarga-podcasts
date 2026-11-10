@@ -794,6 +794,16 @@ FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Artextasis/artextasis.mp3"
 DURACION_MINIMA="0"
 $DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
 
+#DESCARGA DE NOTICIAS DA CORUÑA
+PODCAST_RSS_URL="https://cuacfm.org/radioco/programmes/noticias-de-coruna/rss/"
+FICHERO_DESTINO="/home/cuacfm/ownCloud/Podcast/CUACFM/Noticias-da-Coruña/noticias-da-coruña.mp3"
+DURACION_MINIMA="0"
+$DESCARGADOR_PRIMER_PODCAST "$PODCAST_RSS_URL" "$FICHERO_DESTINO" "$DURACION_MINIMA"
+
+
+
+
+
 #PETICIONES PODCAST ONDA COLOR
 # DESCARGA SANGRE FUCSIA PARA ONDACOLOR
 PODCAST_RSS_URL="https://www.ivoox.com/podcast-sangre-fucsia_fg_f162460_filtro_1.xml"
